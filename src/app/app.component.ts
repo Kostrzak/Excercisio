@@ -9,7 +9,7 @@ export class AppComponent  {
   name = 'Angular';
   exc : ExcerciseReadCard = {
     imgSrc : "https://i.ytimg.com/vi/i6wTUg_tA-A/maxresdefault.jpg",
-    name : "Face Pulls"
+    name : "Face Pullss"
   }
 }
 
