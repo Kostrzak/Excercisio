@@ -7,4 +7,21 @@ import { Component } from '@angular/core';
 })
 export class AppComponent  {
   name = 'Angular';
+  exc : ExcerciseReadCard = {
+    imgSrc : "https://i.ytimg.com/vi/i6wTUg_tA-A/maxresdefault.jpg",
+    name : "Face Pulls"
+  }
+}
+
+export class ExcerciseReadCard {
+  name: string;
+  imgSrc: string;
+  tags?: Tag[];
+  constructor() {
+    this.tags = [];
+  }
+}
+
+export class Tag {
+  name: string;
 }
