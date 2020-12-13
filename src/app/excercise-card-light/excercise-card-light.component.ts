@@ -24,6 +24,8 @@ export class ExcerciseCardLightComponent implements OnInit {
   drills$: any;
   constructor(fs: FireStoreService) {
     this.drills$ = fs.getAllExcercises().valueChanges();
+
+    fs.addExcercise("pp");
   }
   ngOnInit() {}
 }

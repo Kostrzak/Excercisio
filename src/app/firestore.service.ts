@@ -12,4 +12,14 @@ export class FireStoreService {
   public getAllExcercises() {
     return this.afsGlobal.collection("/Excercises");
   }
+
+  public addExcercise(name: string) {
+    this.afsGlobal
+      .collection("/Excercises")
+      .doc("Pullup")
+      .set({
+        name: "Pullup",
+        priority: 9
+      });
+  }
 }
