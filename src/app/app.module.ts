@@ -6,6 +6,7 @@ import { AppComponent } from "./app.component";
 import { HelloComponent } from "./hello.component";
 import { ExcerciseCardComponent } from "./excercise-card/excercise-card.component";
 import { ExcerciseCardFullComponent } from "./excercise-card-full/excercise-card-full.component";
+import { FirestoreService } from './firestore.service';
 
 @NgModule({
   imports: [BrowserModule, FormsModule, MatCardModule],
@@ -15,6 +16,7 @@ import { ExcerciseCardFullComponent } from "./excercise-card-full/excercise-card
     ExcerciseCardComponent,
     ExcerciseCardFullComponent
   ],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  providers: [FirestoreService]
 })
 export class AppModule {}
