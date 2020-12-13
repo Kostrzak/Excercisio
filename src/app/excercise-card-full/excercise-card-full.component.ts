@@ -1,4 +1,5 @@
 import { Component, OnInit } from "@angular/core";
+import { FireStoreService } from "../firestore.service";
 
 @Component({
   selector: "excercise-card-full",
@@ -6,7 +7,9 @@ import { Component, OnInit } from "@angular/core";
   styleUrls: ["./excercise-card-full.component.css"]
 })
 export class ExcerciseCardFullComponent implements OnInit {
-  constructor() {}
-
+  drills: any;
+  constructor(fs: FireStoreService) {
+    this.drills = fs.getAllExcercises().valueChanges();
+  }
   ngOnInit() {}
 }

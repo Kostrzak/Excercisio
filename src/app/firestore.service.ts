@@ -1,8 +1,15 @@
-import { Injectable } from '@angular/core';
+import { Injectable } from "@angular/core";
+import { AngularFirestore } from "@angular/fire/firestore";
 
 @Injectable()
-export class FirestoreService {
+export class FireStoreService {
+  private afsGlobal: AngularFirestore;
 
-  constructor() { }
+  constructor(private db: AngularFirestore) {
+    this.afsGlobal = db;
+  }
 
+  public getAllExcercises() {
+    return this.afsGlobal.collection("/Excercises");
+  }
 }
