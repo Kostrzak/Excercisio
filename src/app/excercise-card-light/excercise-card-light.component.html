@@ -1,0 +1,9 @@
+<p>
+	excercise-card-light works!
+</p>
+
+<mat-chip-list *ngIf="drills$ | async as drills" class="mat-chip-list-stacked" aria-label="Color selection">
+	<mat-chip *ngFor="let chip of drills" selected [color]="chip.color">
+		{{chip.name}}
+	</mat-chip>
+</mat-chip-list>

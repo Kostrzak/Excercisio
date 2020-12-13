@@ -9,6 +9,14 @@ import { ExcerciseCardComponent } from "./excercise-card/excercise-card.componen
 import { ExcerciseCardFullComponent } from "./excercise-card-full/excercise-card-full.component";
 import { FireStoreService } from "./firestore.service";
 import { AngularFirestore } from "@angular/fire/firestore";
+import { MatChipsModule } from "@angular/material/chips";
+import { ExcerciseCardLightComponent } from "./excercise-card-light/excercise-card-light.component";
+import { MatCommonModule, MatInputModule } from "@angular/material";
+
+import {
+  NoopAnimationsModule,
+  BrowserAnimationsModule
+} from "@angular/platform-browser/animations";
 
 const config = {
   apiKey: "AIzaSyC3WX1eC-OooBfYZJwU2AIUQe-btrt2JlA",
@@ -22,6 +30,11 @@ const config = {
 @NgModule({
   imports: [
     BrowserModule,
+    MatCommonModule, //?
+    MatInputModule, //?
+    NoopAnimationsModule, //?
+    BrowserAnimationsModule,
+    MatChipsModule,
     FormsModule,
     AngularFireModule.initializeApp(config),
     MatCardModule
@@ -31,9 +44,11 @@ const config = {
     HelloComponent,
 
     ExcerciseCardComponent,
-    ExcerciseCardFullComponent
+    ExcerciseCardFullComponent,
+    ExcerciseCardLightComponent
   ],
   bootstrap: [AppComponent],
+  exports: [MatChipsModule],
   providers: [FireStoreService, , AngularFirestore]
 })
 export class AppModule {}

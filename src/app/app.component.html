@@ -1,9 +1,15 @@
-<hello name="{{ name }}"></hello>
-<p>
-	Start editing to see some magic happen :)
-</p>
+<div id="main" *ngIf="false">
+	<hello name="{{ name }}"></hello>
+	<p>
+		Start editing to see some magic happen :)
+	</p>
 
-<excercise-card [excercise]="exc"></excercise-card>
-<excercise-card-full>
-	<br>
+	<excercise-card [excercise]="exc"></excercise-card>
+	<excercise-card-full>
+		<br>
 </excercise-card-full>
+</div>
+
+<div>
+	<excercise-card-light></excercise-card-light>
+</div>
