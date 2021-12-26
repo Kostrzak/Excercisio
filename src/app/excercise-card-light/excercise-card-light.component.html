@@ -1,0 +1,12 @@
+<p>
+	excercise-card-light works!
+</p>
+<!-- {{ drills$ | async | json}} -->
+
+<div style="width:400px">
+<mat-chip-list *ngIf="drills$ | async as drills" aria-label="Color selection">
+	<mat-chip *ngFor="let chip of drills" selected [color]="chip.color" >
+
+		{{chip.name}}
+	</mat-chip>
+</mat-chip-list></div>

@@ -1,0 +1,12 @@
+.excerciseCard {
+  border-width: 1px;
+  border-style: solid;
+  height: 130px;
+  width: 450px;
+  padding-right: 20px;
+  background-color: #ffc4c4;
+}
+
+.mat-chip {
+  font-size: 8px !important;
+}

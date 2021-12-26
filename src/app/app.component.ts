@@ -13,6 +13,11 @@ interface Item {
 })
 export class AppComponent {
   title = 'ExcercisioTotalNew';
+  exc: ExcerciseReadCard = {
+    //imgSrc: "https://i.imgur.com/eWhTVg4.png",
+    imgSrc: "https://i.ytimg.com/vi/i6wTUg_tA-A/maxresdefault.jpg",
+    name: "Face Pullss"
+  };
  // item$: Observable<Item[]>;
   itemki$: Observable<any[]>;
   constructor(firestore: Firestore) {
@@ -20,4 +25,17 @@ export class AppComponent {
     this.itemki$ = collectionData(collectio);
  //   this.itemki$ = collection(firestore,'Excercises');
   }
+}
+
+export class ExcerciseReadCard {
+  name?: string;
+  imgSrc?: string;
+  tags?: Tag[];
+  constructor() {
+    this.tags = [];
+  }
+}
+
+export class Tag {
+  name?: string;
 }
