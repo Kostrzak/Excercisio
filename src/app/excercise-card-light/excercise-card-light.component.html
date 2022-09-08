@@ -3,10 +3,29 @@
 </p>
 <!-- {{ drills$ | async | json}} -->
 
-<div style="width:400px">
+<!-- <div style="width:400px">
 <mat-chip-list *ngIf="drills$ | async as drills" aria-label="Color selection">
 	<mat-chip *ngFor="let chip of drills" selected [color]="chip.color" >
 
 		{{chip.name}}
 	</mat-chip>
-</mat-chip-list></div>
+</mat-chip-list></div> -->
+
+<!-- NEXT ITEM on excercise-card <br> -->
+
+<div class="excerciseCardLight exFlexContainer">
+	<!-- Video Link Div -->
+	<div  class="headerDiv" >
+	<div style="display:flex;flex:2;justify-content: center;" ><header style="align-self: center">
+
+		<a [href]="excercise.vidUrl">
+			{{excercise.name}} </a>
+		</header></div>
+	<!-- Thumbnail Div -->
+	<div >
+		<img style="width:124px;height:86px;" [src]=excercise.Url />
+	</div>
+</div>
+	
+
+</div>

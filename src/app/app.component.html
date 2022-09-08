@@ -1,4 +1,4 @@
-<div id="main" *ngIf="true">
+<div id="main" *ngIf="false">
 
 	<p>
 		Start editing to see some magic happen :)
@@ -15,5 +15,21 @@
 </div>
 
 <br><br><br>
+<div *ngIf=" itemki$ | async as excercises">
+	<div class="flex-container">
+<ng-container *ngFor="let ex of excercises" style="width:100%" class="flex-container">
+  <excercise-card [excercise]="ex"></excercise-card>
+</ng-container>
+
+<excercise-card-light [excercise]="excercises[0]"></excercise-card-light>
+</div>
+<hr>
+<div class="flex-container">
+	<ng-container *ngFor="let ex of excercises" style="width:100%" class="flex-container">
+	  <excercise-card-light [excercise]="ex"></excercise-card-light>
+	</ng-container>
+	</div>
+<br><br><br><br><br><br><br><br><br><br><br><br>aaa<br>
+</div>
 <!-- Toolbar -->
 <router-outlet></router-outlet>

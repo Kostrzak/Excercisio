@@ -1,5 +1,6 @@
 import { Component, OnInit,Input } from '@angular/core';
 import {AppComponent, ExcerciseReadCard } from '../app.component';
+import { DomSanitizer, SafeResourceUrl } from '@angular/platform-browser';
 
 @Component({
   selector: 'excercise-card',
@@ -9,9 +10,10 @@ import {AppComponent, ExcerciseReadCard } from '../app.component';
 export class ExcerciseCardComponent implements OnInit {
 
   @Input() excercise : ExcerciseReadCard ;
-
-  constructor() { 
+sanitizer: DomSanitizer
+  constructor(sanitizer: DomSanitizer) { 
     this.excercise = {}
+    this.sanitizer = sanitizer;
   }
 
   ngOnInit() {

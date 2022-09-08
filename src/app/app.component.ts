@@ -13,9 +13,11 @@ interface Item {
 })
 export class AppComponent {
   title = 'ExcercisioTotalNew';
+
+ // excercises : ExcerciseReadCard[];
   exc: ExcerciseReadCard = {
     //imgSrc: "https://i.imgur.com/eWhTVg4.png",
-    imgSrc: "https://i.ytimg.com/vi/i6wTUg_tA-A/maxresdefault.jpg",
+    Url: "https://i.ytimg.com/vi/i6wTUg_tA-A/maxresdefault.jpg",
     name: "Face Pullss"
   };
  // item$: Observable<Item[]>;
@@ -29,7 +31,8 @@ export class AppComponent {
 
 export class ExcerciseReadCard {
   name?: string;
-  imgSrc?: string;
+  Url?: string;
+  vidUrl?: string;
   tags?: Tag[];
   constructor() {
     this.tags = [];
